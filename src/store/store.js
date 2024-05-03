@@ -10,12 +10,14 @@ const createCowSlice = (set) => ({
   seconds: new Date().getSeconds(),
   setTime: () => set((state) => ({
     CowSlice: {
-      ...state.CowSlice, seconds: new Date().getSeconds()
-    }
+      ...state.CowSlice, seconds: new Date().getSeconds(),
+    },
   })),
 });
 
-export const Store = create(devtools((set) => ({
+const Store = create(devtools((set) => ({
   BearSlice: createBearSlice(),
   CowSlice: createCowSlice(set),
 })));
+
+export default Store;
