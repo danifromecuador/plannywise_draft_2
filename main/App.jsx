@@ -1,5 +1,5 @@
-import "./App.css";
+import './App.css';
 
-export const App = () => {
-  return <div className="App">Hello Dani!</div>;
-};
+const App = () => <div className="App">Hello Dani!</div>;
+
+export default App;
